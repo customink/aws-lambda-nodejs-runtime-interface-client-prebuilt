@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+UBUNTU_VERSION=20.04
+NODE_VERSION=12
+
+docker run \
+  --interactive \
+  --tty \
+  --rm \
+  --privileged \
+  --user root \
+  --entrypoint "/bin/bash" \
+  "node-ric-${UBUNTU_VERSION}-${NODE_VERSION}"

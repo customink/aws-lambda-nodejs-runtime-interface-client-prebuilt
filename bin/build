@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+UBUNTU_VERSION=20.04
+NODE_VERSION=12
+
+docker build \
+  --no-cache \
+  --build-arg "UBUNTU_VERSION=${UBUNTU_VERSION}" \
+  --build-arg "NODE_VERSION=${NODE_VERSION}" \
+  --tag "node-ric-${UBUNTU_VERSION}-${NODE_VERSION}" \
+   .
